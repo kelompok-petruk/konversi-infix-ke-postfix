@@ -9,7 +9,7 @@
 
 #include<iostream>
 #include<stdio.h>
-include<stdlib.h>               // untuk eluar ()
+#include<stdlib.h>               // untuk eluar ()
 #include<ctype.h>               // untuk isdigit (char)
 #include<cstring.h>
 #define SIZE 100
@@ -109,6 +109,45 @@ while(item != '\0')(                   // jalankan loop sampai akhir ekspresi in
                  }
                  else if (item == ')'){         // jika simbol sat ini adalah ')' maka pop dan terus muncul sampai '(' bertemu
                  x = pop() ;
+                 	while(x != '('){               
+				postfix_exp[j] = x;
+				j++;
+				x = pop();
+			}
+		}
+		else{ // jika simbol saat ini bukan operan bukan '(' nor ')' dan juga tidak operator itu adalah simbol ilegal 
+			cout<<"\nInvalid infix Expression.\n";        
+			getchar();
+			exit(1);
+		}
+		i++;
+		item = infix_exp[i]; // pergi ke simbol berikutnya dari ekspresi infiks 
+ 				// sementara loop berakhir di sini
+}
+	if(top>0){
+		cout<<"\nInvalid infix Expression.\n";        // itu adalah simbol ilegal 
+		getchar();
+		exit(1);
+	}
+	if(top>0){
+		cout<<"\nInvalid infix Expression.\n";       // itu adalah simbol ilegal 
+		getchar();
+		exit(1);
+	}
+	postfix_exp[j] = '\0';// tambahkan sentinel else menempatkan () fungsi akan mencetak seluruh postfix [] array hingga SIZE
+
+}
+// fungsi utama dimulai 
+int main(){
+	char infix[SIZE], postfix[SIZE];       // mendeklarasikan string infiks dan string postfix 
+
+	cout<<"\nMasukkan ekspresi Infix: ";
+	gets(infix);
+	InfixToPostfix(infix,postfix);                // panggilan untuk mengonversi 
+	cout << "Ekspresi Postfix:";
+	puts(postfix);                     // cetak ekspresi postfix 
+	return 0;
+}
                  
                         
                         
