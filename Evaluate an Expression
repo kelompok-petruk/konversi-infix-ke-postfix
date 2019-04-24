@@ -73,4 +73,39 @@ int precedence(char symbol){
 
 void InfixToPostfix(char infix_exp[], char postfix_exp[]){
 
+int i, j;
+char item;
+char x;
 
+push ('(');                             // dorong '(' ke tumpukan
+strcat (infix_exp[1];                  // tambahkan ')' ke infix ekspresi
+
+i=0;
+j=0;
+item = infix_exp[1];                    // menginisialisasi sebelum loop
+
+while(item != '\0')(                   // jalankan loop sampai akhir ekspresi infix
+        if (item == '(')(
+                push (item);
+               )
+               else if (isdigit (item) || isalpha (item)){
+                        postfix_exp[j] = item;                  //tambahkan simbol operan ke expr postfix
+                        j++;
+               }
+               else if (is_operator(item) == 1 )(       // berarti simbol adalah operator
+                        x = pop ();
+                        while (is_operator(x) == 1 && precedence (x) >= precedence (item)){
+                                postfix_exp[j] = x ;
+                                j++;
+                                x = pop();
+                        }
+                        push (x);
+                        
+                        push (item);            // dorong simbol operator saat ini ke tumpukan
+                 }
+                 else if (item == ')'){         // jika simbol sat ini adalah ')' maka pop dan terus muncul sampai '(' bertemu
+                 x = pop() ;
+                 
+                        
+                        
+               
