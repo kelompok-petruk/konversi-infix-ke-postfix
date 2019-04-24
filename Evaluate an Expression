@@ -43,6 +43,17 @@ return(item);
 //define fungsi yang digunakan untuk menentukan apakah simbol adalah operator atau tidak (Yaitu simbol operan)
 //Fungsi ini mengembalikan 1 jika simbol adalah operator yang lain mengembalikan 0
 
+int is_operator (char symbol){
+    if(symbol == '^' || symbol == '^' || symbol == '/' || symbol == '+' || symbol == '-'){
+          return 1;
+     }
+     else{
+     return 0;
+   }
+ }
+// mendefinisikan fungsi yang digunakan untuk menetapkan prioritas kepada operator.
+// Di sini ' menunjukkan operator eksponen.
+// Dalam fungsi ini kita mengasumsikan nilai integer yang lebih tinggi Berarti prioritas lebih tinggi
 
 
 
