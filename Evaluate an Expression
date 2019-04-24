@@ -5,18 +5,22 @@
 //                 3. Eka Intan Sari      1817051022
 //                 4. Rena Okriyani       1817051029
 
+
+
 #include<iostream>
 #include<stdio.h>
-#include<stdlib.h> // untuk keluar ()
-#include<ctype.h>  //untuk isdigit (char)
-#include<string.h>
-#define SIZE 100 
-// ditanyakan disini sebagai variabel gkobal karena tumpuka [] di gunakan lebih dari satu fungsi
+include<stdlib.h>               // untuk eluar ()
+#include<ctype.h>               // untuk isdigit (char)
+#include<cstring.h>
+#define SIZE 100
+// dinyatakan sebagai variabel global karena tumpukan [] digunakan lebih dari satu fungsi 
+
 using namespace std;
 
 char stack [SIZE];
 int top = -1;
 //tentukan operasi push
+
 void push(char item) {
         if (top >= SIZE -1){
             cout<<"\nStack Overflow.";
@@ -27,6 +31,7 @@ void push(char item) {
     }
 }
 //tentukan operasi pop
+
 char pop(){
         char item {
         if (top <0){
@@ -72,7 +77,6 @@ int precedence(char symbol){
 }
 
 void InfixToPostfix(char infix_exp[], char postfix_exp[]){
-
 int i, j;
 char item;
 char x;
