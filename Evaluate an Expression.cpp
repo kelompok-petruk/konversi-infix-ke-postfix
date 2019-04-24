@@ -18,11 +18,7 @@
 // dinyatakan sebagai variabel global karena tumpukan [] digunakan lebih dari satu fungsi 
 using namespace std;
 
-char stack [SIZE];
-int top = -1;
-//tentukan operasi push
-void push(char item) {
-        if (top >= SIZE-1){
+
             cout<<"\nStack Overflow.";
         }
         else{
