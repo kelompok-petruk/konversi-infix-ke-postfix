@@ -55,6 +55,10 @@ int is_operator (char symbol){
 // Di sini ' menunjukkan operator eksponen.
 // Dalam fungsi ini kita mengasumsikan nilai integer yang lebih tinggi Berarti prioritas lebih tinggi
 
+int precedence(char symbol){
+    if(symbol == '^'){ // operator eksponen, diutamkan tertinggi
+            return(3);
+    }
 
 
 
