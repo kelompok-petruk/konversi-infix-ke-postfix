@@ -59,6 +59,17 @@ int precedence(char symbol){
     if(symbol == '^'){ // operator eksponen, diutamkan tertinggi
             return(3);
     }
+    else if(symbol == '^' || symbol == '/'){
+            return(2);
+    }
+    else if(symbol == '+' || symbol == '-'){ // diutamakan terendah
+            return(1);
+    }
+    else{
+            return(0);
+    }
+}
 
+void InfixToPostfix(char infix_exp[], char postfix_exp[]){
 
 
