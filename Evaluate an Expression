@@ -14,13 +14,11 @@
 #include<string.h>
 #define SIZE 100
 // dinyatakan sebagai variabel global karena tumpukan [] digunakan lebih dari satu fungsi 
-
 using namespace std;
 
 char stack [SIZE];
 int top = -1;
 //tentukan operasi push
-
 void push(char item) {
         if (top >= SIZE -1){
             cout<<"\nStack Overflow.";
@@ -31,7 +29,6 @@ void push(char item) {
     }
 }
 //tentukan operasi pop
-
 char pop(){
         char item;
         if (top <0){
@@ -48,9 +45,8 @@ char pop(){
 }
 //define fungsi yang digunakan untuk menentukan apakah simbol adalah operator atau tidak (Yaitu simbol operan)
 //Fungsi ini mengembalikan 1 jika simbol adalah operator yang lain mengembalikan 0
-
 int is_operator (char symbol){
-    if(symbol == '^' || symbol == '^' || symbol == '/' || symbol == '+' || symbol == '-'){
+    if(symbol == '^' || symbol == '*' || symbol == '/' || symbol == '+' || symbol == '-'){
           return 1;
      }
      else{
@@ -60,12 +56,11 @@ int is_operator (char symbol){
 // mendefinisikan fungsi yang digunakan untuk menetapkan prioritas kepada operator.
 // Di sini ' menunjukkan operator eksponen.
 // Dalam fungsi ini kita mengasumsikan nilai integer yang lebih tinggi Berarti prioritas lebih tinggi
-
 int precedence(char symbol){
     if(symbol == '^'){ // operator eksponen, diutamkan tertinggi
             return(3);
     }
-    else if(symbol == '^' || symbol == '/'){
+    else if(symbol == '*' || symbol == '/'){
             return(2);
     }
     else if(symbol == '+' || symbol == '-'){ // diutamakan terendah
@@ -75,7 +70,6 @@ int precedence(char symbol){
             return(0);
     }
 }
-
 void InfixToPostfix(char infix_exp[], char postfix_exp[]){
 int i, j;
 char item;
@@ -135,7 +129,6 @@ while(item != '\0'){                   // jalankan loop sampai akhir ekspresi in
 		exit(1);
 	}
 	postfix_exp[j] = '\0';// tambahkan sentinel else menempatkan () fungsi akan mencetak seluruh postfix [] array hingga SIZE
-
 }
 // fungsi utama dimulai 
 int main(){
