@@ -5,4 +5,15 @@
 //                 3. Eka Intan Sari      1817051022
 //                 4. Rena Okriyani       1817051029
 
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h> // untuk keluar ()
+#include<ctype.h>  //untuk isdigit (char)
+#include<string.h>
+#define SIZE 100 // ditanyakan disini sebagai variabel gkobal karena tumpuka [] di gunakan lebih dari satu fungsi
+using namespace std;
+
+char stack [SIZE];
+
+
 
