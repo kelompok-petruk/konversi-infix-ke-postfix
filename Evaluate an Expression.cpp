@@ -5,7 +5,7 @@
 //                 3. Eka Intan Sari      1817051022
 //                 4. Rena Okriyani       1817051029
 
-// link github : https://github.com/kelompok-petruk/konversi-infix-ke-postfix/blob/master/Evaluate%20an%20Expression
+// link github : https://github.com/kelompok-petruk/konversi-infix-ke-postfix/edit/master/Evaluate%20an%20Expression.cpp
 
 
 
