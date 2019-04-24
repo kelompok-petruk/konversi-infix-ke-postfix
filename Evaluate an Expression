@@ -36,6 +36,12 @@ exit(1);
 }
 else{
 item =stack(top);
+top = top-1;
+return(item);
+}
+}
+//define fungsi yang digunakan untuk menentukan apakah simbol adalah operator atau tidak (Yaitu simbol operan)
+//Fungsi ini mengembalikan 1 jika simbol adalah operator yang lain mengembalikan 0
 
 
 
