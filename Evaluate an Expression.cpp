@@ -140,7 +140,8 @@ int main(){
 	gets(infix);
 	InfixToPostfix(infix,postfix);               // panggilan untuk mengonversi 
 	cout << "Ekspresi Postfix:";
-	
+	puts(postfix);                     // cetak ekspresi postfix 
+	return 0;
 	
 }
                  
