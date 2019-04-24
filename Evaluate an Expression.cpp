@@ -136,7 +136,10 @@ while(item != '\0'){                   // jalankan loop sampai akhir ekspresi in
 int main(){
 	char infix[SIZE], postfix[SIZE];       // mendeklarasikan string infiks dan string postfix 
 
-	               // panggilan untuk mengonversi 
+	               
+	cout<<"\nMasukkan ekspresi Infix: ";
+	gets(infix);				// panggilan untuk mengonversi 
+	InfixToPostfix(infix,postfix);
 	cout << "Ekspresi Postfix:";
 	puts(postfix);                     // cetak ekspresi postfix 
 	return 0;
