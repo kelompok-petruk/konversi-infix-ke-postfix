@@ -10,35 +10,36 @@
 #include<stdlib.h> // untuk keluar ()
 #include<ctype.h>  //untuk isdigit (char)
 #include<string.h>
-#define SIZE 100 // ditanyakan disini sebagai variabel gkobal karena tumpuka [] di gunakan lebih dari satu fungsi
+#define SIZE 100 
+// ditanyakan disini sebagai variabel gkobal karena tumpuka [] di gunakan lebih dari satu fungsi
 using namespace std;
 
 char stack [SIZE];
 int top = -1;
 //tentukan operasi push
 void push(char item) {
-if (top >= SIZE -1){
-cout<<"\nStack Overflow.";
-}
-else{
-top =top+1;
-stack[top] =item;
-}
+        if (top >= SIZE -1){
+            cout<<"\nStack Overflow.";
+        }
+        else{
+            top =top+1;
+            stack[top] =item;
+    }
 }
 //tentukan operasi pop
 char pop(){
-char item {
-if (top <0){
-cout<<"stack under flow: ekspresi infiks tidak valid";
-getchar ();
-//under flow dapat terjadi untuk ekspresi tidak valid dimana (dan) tidak cocok
-exit(1);
-}
-else{
-item =stack(top);
-top = top-1;
-return(item);
-}
+        char item {
+        if (top <0){
+                cout<<"stack under flow: ekspresi infiks tidak valid";
+                getchar ();
+                //under flow dapat terjadi untuk ekspresi tidak valid dimana (dan) tidak cocok
+                exit(1);
+        }
+        else{
+            item =stack(top);
+            top = top-1;
+            return(item);
+        }
 }
 //define fungsi yang digunakan untuk menentukan apakah simbol adalah operator atau tidak (Yaitu simbol operan)
 //Fungsi ini mengembalikan 1 jika simbol adalah operator yang lain mengembalikan 0
