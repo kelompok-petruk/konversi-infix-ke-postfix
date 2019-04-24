@@ -34,7 +34,10 @@ void push(char item) {
 char pop(){
         char item;
         if (top <0){
-                
+                cout<<"stack under flow: ekspresi infiks tidak valid";
+                getchar ();
+                //under flow dapat terjadi untuk ekspresi tidak valid dimana (dan) tidak cocok
+                exit(1);
         }
         else{
             item =stack[top];
